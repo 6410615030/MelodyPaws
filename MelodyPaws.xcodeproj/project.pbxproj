@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E175E832BE22A5E00175B92 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E175E822BE22A5E00175B92 /* HomeView.swift */; };
+		5E175E852BE22A7200175B92 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E175E842BE22A7200175B92 /* HomeViewModel.swift */; };
+		5E175E8A2BE22FA300175B92 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E175E892BE22FA300175B92 /* AudioManager.swift */; };
+		5E175E8C2BE2306900175B92 /* track1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5E175E8B2BE2306900175B92 /* track1.mp3 */; };
 		5E20330F2BDE61E8006E1CA5 /* MelodyPawsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E20330E2BDE61E8006E1CA5 /* MelodyPawsApp.swift */; };
 		5E2033112BDE61E8006E1CA5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2033102BDE61E8006E1CA5 /* MainView.swift */; };
 		5E2033132BDE61EB006E1CA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E2033122BDE61EB006E1CA5 /* Assets.xcassets */; };
@@ -46,6 +50,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E175E822BE22A5E00175B92 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5E175E842BE22A7200175B92 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		5E175E892BE22FA300175B92 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		5E175E8B2BE2306900175B92 /* track1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = track1.mp3; sourceTree = "<group>"; };
 		5E20330B2BDE61E8006E1CA5 /* MelodyPaws.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MelodyPaws.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E20330E2BDE61E8006E1CA5 /* MelodyPawsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelodyPawsApp.swift; sourceTree = "<group>"; };
 		5E2033102BDE61E8006E1CA5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -96,6 +104,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E175E862BE22E1600175B92 /* Static */ = {
+			isa = PBXGroup;
+			children = (
+				5E175E872BE22E2400175B92 /* BGTrack */,
+			);
+			path = Static;
+			sourceTree = "<group>";
+		};
+		5E175E872BE22E2400175B92 /* BGTrack */ = {
+			isa = PBXGroup;
+			children = (
+				5E175E8B2BE2306900175B92 /* track1.mp3 */,
+			);
+			path = BGTrack;
+			sourceTree = "<group>";
+		};
+		5E175E882BE22F7F00175B92 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				5E175E892BE22FA300175B92 /* AudioManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		5E2033022BDE61E8006E1CA5 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +147,8 @@
 		5E20330D2BDE61E8006E1CA5 /* MelodyPaws */ = {
 			isa = PBXGroup;
 			children = (
+				5E175E882BE22F7F00175B92 /* Managers */,
+				5E175E862BE22E1600175B92 /* Static */,
 				5EF7FC1D2BE1369900399757 /* Models */,
 				5EF7FC1C2BE1367E00399757 /* ViewModels */,
 				5EF7FC1B2BE1367400399757 /* Views */,
@@ -151,6 +185,7 @@
 				5EF7FC532BE1793000399757 /* RegisterView.swift */,
 				5EF7FC4F2BE178F200399757 /* LoginView.swift */,
 				5EF7FC5B2BE179BE00399757 /* TLButton.swift */,
+				5E175E822BE22A5E00175B92 /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -162,6 +197,7 @@
 				5EF7FC552BE1796700399757 /* LoginViewModel.swift */,
 				5EF7FC572BE1797C00399757 /* RegisterViewModel.swift */,
 				5EF7FC592BE1798700399757 /* ProfileViewModel.swift */,
+				5E175E842BE22A7200175B92 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -260,6 +296,7 @@
 			files = (
 				5E2033162BDE61EB006E1CA5 /* Preview Assets.xcassets in Resources */,
 				5EF7FC2A2BE1780B00399757 /* GoogleService-Info.plist in Resources */,
+				5E175E8C2BE2306900175B92 /* track1.mp3 in Resources */,
 				5E2033132BDE61EB006E1CA5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,12 +310,15 @@
 			files = (
 				5EF7FC2C2BE1786800399757 /* Extension.swift in Sources */,
 				5E2033112BDE61E8006E1CA5 /* MainView.swift in Sources */,
+				5E175E832BE22A5E00175B92 /* HomeView.swift in Sources */,
+				5E175E8A2BE22FA300175B92 /* AudioManager.swift in Sources */,
 				5E20330F2BDE61E8006E1CA5 /* MelodyPawsApp.swift in Sources */,
 				5EF7FC542BE1793000399757 /* RegisterView.swift in Sources */,
 				5EF7FC5A2BE1798700399757 /* ProfileViewModel.swift in Sources */,
 				5EF7FC5C2BE179BE00399757 /* TLButton.swift in Sources */,
 				5EF7FC562BE1796700399757 /* LoginViewModel.swift in Sources */,
 				5EF7FC502BE178F200399757 /* LoginView.swift in Sources */,
+				5E175E852BE22A7200175B92 /* HomeViewModel.swift in Sources */,
 				5EF7FC5E2BE17AF200399757 /* User.swift in Sources */,
 				5EF7FC522BE1790E00399757 /* ProfileView.swift in Sources */,
 				5EF7FC582BE1797C00399757 /* RegisterViewModel.swift in Sources */,

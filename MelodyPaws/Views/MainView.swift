@@ -9,27 +9,29 @@ import SwiftUI
 import FirebaseAuth
 
 struct MainView: View {
-    @StateObject var viewModel = MainViewModel()
+    @StateObject var audioManager = AudioManager()
     
     var body: some View {
-        if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {
-            accountView
-        } else {
-            LoginView()
+        NavigationView {
+            NavigationLink("Play", destination: HomeView())
+        }
+        .onAppear{
+            audioManager.setupAudioSession()
+            audioManager.startPlayback(trackIndex: 0)
         }
     }
     
-    var accountView: some View {
-        TabView {
-
-            
-            ProfileView()
-                .tabItem {
-                    Label("Profile", systemImage: "person.circle")
-                }
-            
-        }
-    }
+//    var accountView: some View {
+//        TabView {
+//
+//            
+//            ProfileView()
+//                .tabItem {
+//                    Label("Profile", systemImage: "person.circle")
+//                }
+//            
+//        }
+//    }
 }
 
 #Preview {
