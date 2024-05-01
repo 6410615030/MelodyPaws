@@ -40,7 +40,7 @@ struct ProfileView: View {
                 Button {
                     viewModel.logOut()
                 } label: {
-                    Text("Logouttt")
+                    Text("Logout")
                 }
             } else {
                 Text("Loading Profile...")

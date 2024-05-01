@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    
+   
     var body: some View {
         @StateObject var viewModel = HomeViewModel()
         VStack {
@@ -17,6 +17,12 @@ struct HomeView: View {
             } else {
                 
                 Text("home")
+                NavigationLink("change pass", destination: changePasswordView())
+                                        .padding()
+                NavigationLink("profile", destination: ProfileView())
+                                        .padding() //just want to use logout
+                
+                
             }
         }
     }
