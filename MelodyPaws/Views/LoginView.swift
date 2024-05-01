@@ -12,26 +12,43 @@ struct LoginView: View {
     
     var body: some View {
         NavigationView {
-            
-            VStack {
+            ZStack{
+                Image("newLogin")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: UIScreen.main.bounds.height)
+                    .edgesIgnoringSafeArea(.all)
+                    .navigationBarHidden(true)
                 
-                Form {
-                    TextField("Email Address", text: $viewModel.email)
-                        .textFieldStyle(DefaultTextFieldStyle())
-                        .autocorrectionDisabled()
-                        .autocapitalization(.none)
-                    SecureField("Password", text: $viewModel.password)
-                        .textFieldStyle(DefaultTextFieldStyle())
-                    TLButton(title: "Log In", background: .blue) {
-                        viewModel.login()
+                VStack {Spacer()
+                        .frame(height: 200)
+                                    List {
+                                        TextField("Email Address", text: $viewModel.email)
+                                            .textFieldStyle(DefaultTextFieldStyle())
+                                            .autocorrectionDisabled()
+                                            .autocapitalization(.none)
+                                                                                    SecureField("Password", text: $viewModel.password)
+                                            .textFieldStyle(DefaultTextFieldStyle())
+                                            
+                                        
+                                        TLButton(title: "Log In", background: .blue) {
+                                            viewModel.login()
+                                        }
+                                        .listRowBackground(Color.clear)
+                                    }
+                                    .listStyle(PlainListStyle())
+                                    .background(Color.clear) 
+                                
+                    VStack {
+                        Text("New Around Here")
+                        NavigationLink("Create an Account", destination: RegisterView())
                     }
-                }
-                VStack {
-                    Text("New Around Here")
-                    NavigationLink("Create an Account", destination: RegisterView())
+                    
                 }
                 
             }
+            
+
         }
         
     }
