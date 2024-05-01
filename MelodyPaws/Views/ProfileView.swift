@@ -31,6 +31,10 @@ struct ProfileView: View {
                         Text("Member Since: ")
                         Text("\(Date(timeIntervalSince1970: user.joined).formatted(date: .abbreviated, time: .shortened))")
                     }
+                    HStack {
+                        Text("Coins: ")
+                        Text("\(user.coins)") 
+                    }
                 }
                 
                 Button {
