@@ -49,6 +49,7 @@
 		5EF7FC5E2BE17AF200399757 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF7FC5D2BE17AF200399757 /* User.swift */; };
 		CDDBA0742BE24AC900C8DB75 /* changePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDBA0732BE24AC900C8DB75 /* changePasswordView.swift */; };
 		CDDBA0762BE24AE000C8DB75 /* changePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDBA0752BE24AE000C8DB75 /* changePasswordViewModel.swift */; };
+		CDDBA07C2BE2CB6400C8DB75 /* settingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDBA07B2BE2CB6400C8DB75 /* settingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		5EF7FC5D2BE17AF200399757 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CDDBA0732BE24AC900C8DB75 /* changePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = changePasswordView.swift; sourceTree = "<group>"; };
 		CDDBA0752BE24AE000C8DB75 /* changePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = changePasswordViewModel.swift; sourceTree = "<group>"; };
+		CDDBA07B2BE2CB6400C8DB75 /* settingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 				5EF7FC5B2BE179BE00399757 /* TLButton.swift */,
 				5E175E822BE22A5E00175B92 /* HomeView.swift */,
 				CDDBA0732BE24AC900C8DB75 /* changePasswordView.swift */,
+				CDDBA07B2BE2CB6400C8DB75 /* settingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				5EF7FC5A2BE1798700399757 /* ProfileViewModel.swift in Sources */,
 				CDDBA0742BE24AC900C8DB75 /* changePasswordView.swift in Sources */,
 				5EF7FC5C2BE179BE00399757 /* TLButton.swift in Sources */,
+				CDDBA07C2BE2CB6400C8DB75 /* settingsView.swift in Sources */,
 				5EF7FC562BE1796700399757 /* LoginViewModel.swift in Sources */,
 				5EF7FC502BE178F200399757 /* LoginView.swift in Sources */,
 				5E175E852BE22A7200175B92 /* HomeViewModel.swift in Sources */,

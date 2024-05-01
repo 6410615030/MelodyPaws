@@ -21,7 +21,8 @@ struct HomeView: View {
                                         .padding()
                 NavigationLink("profile", destination: ProfileView())
                                         .padding() //just want to use logout
-                
+                NavigationLink("settings", destination: settingsView())
+                                        .padding()
                 
             }
         }
