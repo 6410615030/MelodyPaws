@@ -66,53 +66,26 @@ class GameViewModel: ObservableObject {
         }
     }
     
-    func checkCollisions(posX: CGFloat, posY: CGFloat) {
-        let collisionThreshold: CGFloat = 10
-        var toRemoveItems: [FallingItem] = []
 
-        for i in items.indices {
-            let distanceX = abs(posX - items[i].startX)
-            if distanceX <= collisionThreshold{
-                score += 1
-                toRemoveItems.append(items[i])
-                items[i].atPos = true
-            }
-//            else {
-//                items[i].atPos = false
-//            }
-//            if items[i].currentY == items[i].endY {
-//                toRemoveItems.append(items[i])
-//            }
-//                toRemoveItems.append(items[i])
-        }
+    func checkCollision(geometry: GeometryProxy, item: FallingItem, curY: CGFloat?) -> Bool {
         
-        for i in toRemoveItems.indices {
-            removeFallItem(item: toRemoveItems[i])
-        }
-        
-        toRemoveItems.forEach { removeFallItem(item: $0) }
+        let charObjFrame = CGRect(x: charObj.position.width, y: charObj.position.height+charObj.size.height/2,
+                                  width: charObj.size.width/2, height: charObj.size.height/2)
+        let fallingItemFrame = CGRect(x: item.startX, y: curY ?? item.startY, width: item.size.width/2, height: item.size.height/2)
+
+        return fallingItemFrame.intersects(charObjFrame)
     }
-
+    
     func removeFallItem(item: FallingItem) {
         items.removeAll { $0.id == item.id }
     }
     
-//    func updatePositions() {
-//        for item in items {
-//            let deltaY = (item.endY - item.startY) / CGFloat(item.speed) * 0.016  // For smoother animation
-//            let newCurrentY = item.currentY + deltaY
-//            if newCurrentY >= item.midY && !item.atPos {
-//                item.atPos = true
-//            }
-//
-//            if newCurrentY >= item.endY {
-//                item.currentY = item.endY
-//            } else {
-//                item.currentY = newCurrentY
-//            }
-//        }
-//    }
-//    
+    func isCollision(index: Int){
+        if (!items[index].isCollide){
+            score += 1
+            items[index].isCollide = true
+        }
+    }
 
     
 }
