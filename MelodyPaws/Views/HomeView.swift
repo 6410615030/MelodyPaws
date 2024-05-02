@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
-   
+    
+    @StateObject var viewModel = HomeViewModel()
     var body: some View {
-        @StateObject var viewModel = HomeViewModel()
         VStack {
             if !viewModel.isSignedIn, viewModel.currentUserId.isEmpty {
                 LoginView()
@@ -18,15 +18,24 @@ struct HomeView: View {
                 
                 Text("home")
                 NavigationLink("change pass", destination: changePasswordView())
-                                        .padding()
+                    .padding()
                 NavigationLink("profile", destination: ProfileView())
-                                        .padding() //just want to use logout
+                    .padding() //just want to use logout
                 NavigationLink("settings", destination: settingsView())
-                                        .padding()
+                    .padding()
                 
+                NavigationView {
+                    VStack {
+                        if !viewModel.isSignedIn, viewModel.currentUserId.isEmpty {
+                            LoginView()
+                        } else {
+                            NavigationLink("play", destination: GameView())
+                            
+                        }
+                    }
+                }
             }
         }
-    }
 }
 
 #Preview {

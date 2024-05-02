@@ -9,54 +9,8 @@ import SwiftUI
 import FirebaseAuth
 
 struct MainView: View {
-    @StateObject var audioManager = AudioManager()
+    @StateObject var audioManager = AudioViewModel()
     
-    
-//    var body: some View {
-//        ZStack {
-//            Image("main3")
-//                .resizable()
-//                .scaledToFit()
-//                .edgesIgnoringSafeArea(.all)
-//            NavigationLink(destination: HomeView()) {
-//                                Image(systemName: "play.fill")
-//                                    .resizable()
-//                                    .aspectRatio(contentMode: .fit)
-//                                    .frame(width: 70, height: 70)
-//                                    .foregroundColor(.black)
-//                                    .padding()
-//                                    
-//                                    .clipShape(Circle())
-//                                    .padding()
-//                            }
-//                            .navigationBarHidden(true)
-//            
-//            
-////            NavigationView {
-////                NavigationLink("Play", destination: HomeView())
-////            }
-//            
-//                }
-//
-//        .onAppear{
-//            audioManager.setupAudioSession()
-//            audioManager.startPlayback(trackIndex: 0)
-//            
-//        }
-//        
-//    }
-//    
-////    var accountView: some View {
-////        TabView {
-////
-////            
-////            ProfileView()
-////                .tabItem {
-////                    Label("Profile", systemImage: "person.circle")
-////                }
-////            
-////        }
-////    }
     var body: some View {
             NavigationView {
                 ZStack {
