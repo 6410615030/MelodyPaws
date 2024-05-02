@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @StateObject var viewModel = HomeViewModel()
+    @State private var isRecording = false
         
     var body: some View {
         VStack {
@@ -31,6 +32,8 @@ struct HomeView: View {
                     .padding()
                 NavigationLink("shop", destination: ShopView())
                     .padding()
+                NavigationLink("tracks", destination: TrackView())
+                    .padding()
                 VStack {
                     if !viewModel.isSignedIn, viewModel.currentUserId.isEmpty {
                         LoginView()
@@ -40,6 +43,15 @@ struct HomeView: View {
                     }
                 }
                 
+                
+                Button(isRecording ? "Stop Recording" : "Start Recording") {
+                    isRecording.toggle()
+                    if isRecording {
+                        tuneViewModel.startRecordingTapped()
+                    } else {
+                        tuneViewModel.stopRecordingTapped()
+                    }
+                }
                 
             }
         }

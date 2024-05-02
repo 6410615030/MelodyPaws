@@ -8,9 +8,13 @@
 import Foundation
 import AVFoundation
 
+<<<<<<< Updated upstream
 class AudioManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
+=======
+class AudioManager: NSObject, AVAudioPlayerDelegate {
+>>>>>>> Stashed changes
     var player: AVAudioPlayer?
-    let tracks = ["track1"]
+    let tracks = ["track1", "track2"]
     var currentTrackIndex = 0
     @Published var isSoundOn = true
     
@@ -20,7 +24,11 @@ class AudioManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
         setupAudioSession()
     }
     
+<<<<<<< Updated upstream
+    private func setupAudioSession() {
+=======
     func setupAudioSession() {
+>>>>>>> Stashed changes
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
             try AVAudioSession.sharedInstance().setActive(true)
@@ -29,7 +37,7 @@ class AudioManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
         }
     }
 
-    func startPlayback(trackIndex: Int) {
+    private func startPlayback(trackIndex: Int) {
         guard trackIndex < tracks.count else { return }
         let trackName = tracks[trackIndex]
         guard let url = Bundle.main.url(forResource: trackName, withExtension: "mp3") else {
@@ -46,9 +54,12 @@ class AudioManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
             print("Failed to initialize player. Error: \(error)")
         }
     }
-
-    func nextTrack() {
-        currentTrackIndex = (currentTrackIndex + 1) % tracks.count
+    
+    func changeTrack(trackIndex: Int) {
+        player?.stop()
+        player = nil
+        setupAudioSession()
+        self.currentTrackIndex = trackIndex
         startPlayback(trackIndex: currentTrackIndex)
     }
     func toggleSound() {
