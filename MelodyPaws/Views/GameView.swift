@@ -16,7 +16,6 @@ struct GameView: View {
         ZStack{
             FallingItemsView(items: viewModel.items)
             CharacterObjView(charObj: viewModel.charObj)
-//                .position(x: viewModel.charObj.position.width, y: viewModel.charObj.position.height)
                 .position(x: viewModel.charObj.position.width, y: viewModel.charObj.position.height)
                 .gesture(
                     DragGesture()

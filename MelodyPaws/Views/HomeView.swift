@@ -24,19 +24,18 @@ struct HomeView: View {
                     .padding() //just want to use logout
                 NavigationLink("settings", destination: settingsView())
                     .padding()
-                
-                NavigationView {
-                    VStack {
-                        if !viewModel.isSignedIn, viewModel.currentUserId.isEmpty {
-                            LoginView()
-                        } else {
-                            NavigationLink("play", destination: GameView())
-                            
-                        }
+                VStack {
+                    if !viewModel.isSignedIn, viewModel.currentUserId.isEmpty {
+                        LoginView()
+                    } else {
+                        NavigationLink("play", destination: GameView())
+                        
                     }
                 }
+                
             }
         }
+    }
 }
 
 #Preview {

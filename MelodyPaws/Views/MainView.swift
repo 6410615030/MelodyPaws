@@ -9,7 +9,7 @@ import SwiftUI
 import FirebaseAuth
 
 struct MainView: View {
-    @StateObject var viewModel = AudioViewModel()
+    @StateObject var audioManager = AudioManager()
     
     var body: some View {
             NavigationView {
