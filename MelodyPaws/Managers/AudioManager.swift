@@ -8,7 +8,7 @@
 import Foundation
 import AVFoundation
 
-class AudioManager: NSObject, AVAudioPlayerDelegate {
+class AudioManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
     var player: AVAudioPlayer?
     let tracks = ["track1"]
     var currentTrackIndex = 0
