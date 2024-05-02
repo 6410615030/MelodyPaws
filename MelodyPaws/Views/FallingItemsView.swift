@@ -26,30 +26,11 @@ struct FallingItemsView: View {
                     .scaledToFit()
                     .frame(width: item.size.width, height: item.size.height)
                     .position(x: item.startX, y: currentYPositions[item.id, default: item.startY])
-<<<<<<< Updated upstream
-                    .onAppear {
-                        withAnimation(Animation.linear(duration: item.speed)) {
-                            currentYPositions[item.id] = item.endY
-                        }
-                    }
-//                    .onChange(of: item.atPos) { newPos in
-//                        withAnimation(.linear(duration: item.speed)) {
-//                            if newPos {
-//                                currentYPositions[item.id] = item.midY
-//                            } else {
-//                                currentYPositions[item.id] = item.endY
-//                            }
-//                        }
-//                    }
-=======
->>>>>>> Stashed changes
 //                    .onAppear {
 //                        withAnimation(Animation.linear(duration: item.speed)) {
 //                            currentYPositions[item.id] = item.endY
 //                        }
 //                    }
-<<<<<<< Updated upstream
-=======
                     .onChange(of: item.atPos) { newPos in
                         withAnimation(.linear(duration: item.speed)) {
                             if newPos {
@@ -64,7 +45,6 @@ struct FallingItemsView: View {
                             currentYPositions[item.id] = item.endY
                         }
                     }
->>>>>>> Stashed changes
             }
         }
         .edgesIgnoringSafeArea(.all)
