@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @StateObject var viewModel = HomeViewModel()
+        
     var body: some View {
         VStack {
             if !viewModel.isSignedIn, viewModel.currentUserId.isEmpty {
