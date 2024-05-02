@@ -12,6 +12,8 @@ class AudioManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
     var player: AVAudioPlayer?
     let tracks = ["track1"]
     var currentTrackIndex = 0
+    @Published var isSoundOn = true
+    
 
     override init() {
         super.init()
@@ -49,4 +51,9 @@ class AudioManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
         currentTrackIndex = (currentTrackIndex + 1) % tracks.count
         startPlayback(trackIndex: currentTrackIndex)
     }
+    func toggleSound() {
+           isSoundOn.toggle()
+           
+           player?.volume = isSoundOn ? 1.0 : 0.0
+       }
 }

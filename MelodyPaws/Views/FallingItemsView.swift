@@ -32,7 +32,7 @@ struct FallingItemsView: View {
 //                        }
 //                    }
                     .onChange(of: item.atPos) { newPos in
-                        withAnimation(.linear(duration: item.speed).repeatForever(autoreverses: false)) {
+                        withAnimation(.linear(duration: item.speed)) {
                             if newPos {
                                 currentYPositions[item.id] = item.midY
                             } else {

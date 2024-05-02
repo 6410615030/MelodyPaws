@@ -18,30 +18,53 @@ struct LoginView: View {
                     .scaledToFill()
                     .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: UIScreen.main.bounds.height)
                     .edgesIgnoringSafeArea(.all)
-                    .navigationBarHidden(true)
+                    
                 
-                VStack {Spacer()
+                VStack {
+                    Spacer()
                         .frame(height: 200)
-                                    List {
-                                        TextField("Email Address", text: $viewModel.email)
-                                            .textFieldStyle(DefaultTextFieldStyle())
-                                            .autocorrectionDisabled()
-                                            .autocapitalization(.none)
-                                                                                    SecureField("Password", text: $viewModel.password)
-                                            .textFieldStyle(DefaultTextFieldStyle())
-                                            
-                                        
-                                        TLButton(title: "Log In", background: .blue) {
-                                            viewModel.login()
-                                        }
-                                        .listRowBackground(Color.clear)
-                                    }
-                                    .listStyle(PlainListStyle())
-                                    .background(Color.clear) 
+                    List {
+                        VStack(spacing: 20) {
+                            TextField("Email Address", text: $viewModel.email)
+                                .padding()
+                                .background(Color.white)
+                                .cornerRadius(30)
+                                
+                                .textFieldStyle(PlainTextFieldStyle())
+                                .autocorrectionDisabled()
+                                .autocapitalization(.none)
+
+                            SecureField("Password", text: $viewModel.password)
+                                .padding()
+                                .background(Color.white)
+                                .cornerRadius(30)
+                                
+                                .textFieldStyle(PlainTextFieldStyle())
+                                .autocorrectionDisabled()
+                                .autocapitalization(.none)
+                            
+                            TLButton(title: "Log In", background: .black) {
+                                viewModel.login()
+                            }
+                            
+                            .cornerRadius(30)
+                        }
+                        .listRowBackground(Color.clear)
+                    }
+                    .listStyle(PlainListStyle())
+                    .background(Color.clear)
+
                                 
                     VStack {
-                        Text("New Around Here")
-                        NavigationLink("Create an Account", destination: RegisterView())
+                        
+                        NavigationLink(destination: RegisterView()) {
+                                Text("Register Here!")
+                                    .font(.title)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color.pink)
+                                    .textCase(.uppercase)
+                                    .cornerRadius(30)
+                            }
                     }
                     
                 }

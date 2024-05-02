@@ -13,4 +13,6 @@ struct User: Codable {
     let email: String
     let joined: TimeInterval
     var coins: Int = 0
+    var wearing: String = "default"
+    var wardrobe: [String] = ["default"]
 }
