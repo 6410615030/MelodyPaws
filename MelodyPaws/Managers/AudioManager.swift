@@ -8,11 +8,7 @@
 import Foundation
 import AVFoundation
 
-<<<<<<< Updated upstream
 class AudioManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
-=======
-class AudioManager: NSObject, AVAudioPlayerDelegate {
->>>>>>> Stashed changes
     var player: AVAudioPlayer?
     let tracks = ["track1", "track2"]
     var currentTrackIndex = 0
@@ -24,11 +20,7 @@ class AudioManager: NSObject, AVAudioPlayerDelegate {
         setupAudioSession()
     }
     
-<<<<<<< Updated upstream
     private func setupAudioSession() {
-=======
-    func setupAudioSession() {
->>>>>>> Stashed changes
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
             try AVAudioSession.sharedInstance().setActive(true)

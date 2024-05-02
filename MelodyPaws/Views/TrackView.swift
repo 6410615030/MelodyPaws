@@ -14,7 +14,7 @@ struct TrackView: View {
         VStack {
             ForEach(viewModel.tracks.indices, id: \.self) { index in
                 Button("Track \(index)") {
-                    viewModel.play(trackIndex: index)
+                    viewModel.changeTrack(trackIndex: index)
                 }
             }
         }

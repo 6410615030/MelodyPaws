@@ -16,10 +16,6 @@ struct GameView: View {
         ZStack{
             FallingItemsView(items: viewModel.items)
             CharacterObjView(charObj: viewModel.charObj)
-<<<<<<< Updated upstream
-=======
-//                .position(x: viewModel.charObj.position.width, y: viewModel.charObj.position.height)
->>>>>>> Stashed changes
                 .position(x: viewModel.charObj.position.width, y: viewModel.charObj.position.height)
                 .gesture(
                     DragGesture()

@@ -8,7 +8,6 @@
 import Foundation
 class AudioViewModel: ObservableObject {
     private var audioManager = AudioManager()
-<<<<<<< Updated upstream
     
     var tracks: [String] {
         return audioManager.tracks
@@ -18,16 +17,11 @@ class AudioViewModel: ObservableObject {
         return audioManager.currentTrackIndex
     }
     
-    func play(trackIndex: Int) {
-        audioManager.changeTrack(trackIndex: trackIndex)
-=======
-
     func play() {
-        audioManager.startPlayback(trackIndex: 0)
+        audioManager.changeTrack(trackIndex: currentTrack)
     }
 
-    func next() {
-        audioManager.nextTrack()
->>>>>>> Stashed changes
+    func changeTrack(trackIndex: Int) {
+        audioManager.changeTrack(trackIndex: trackIndex)
     }
 }

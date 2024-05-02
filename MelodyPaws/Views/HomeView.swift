@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct HomeView: View {
+<<<<<<< refs/remotes/origin/main
     
+=======
+    @StateObject var tuneViewModel = AudioTuneViewModel()
+>>>>>>> track
     @StateObject var viewModel = HomeViewModel()
     @State private var isRecording = false
         
@@ -52,7 +56,10 @@ struct HomeView: View {
                         tuneViewModel.stopRecordingTapped()
                     }
                 }
+<<<<<<< refs/remotes/origin/main
                 
+=======
+>>>>>>> track
             }
         }
     }

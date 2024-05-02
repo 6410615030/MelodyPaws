@@ -20,7 +20,7 @@ struct MainView: View {
                         .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: UIScreen.main.bounds.height)
                         .edgesIgnoringSafeArea(.all)
                         .onAppear {
-                            viewModel.play(trackIndex: viewModel.currentTrack)
+                            viewModel.play()
                         }
                         .navigationBarHidden(true)
                     NavigationLink(destination: HomeView()) {
@@ -39,11 +39,6 @@ struct MainView: View {
                 }
             }
         }
-<<<<<<< Updated upstream
-=======
-        .onAppear{
-            viewModel.play()
-        }
     }
     
 //    var accountView: some View {
@@ -57,8 +52,6 @@ struct MainView: View {
 //            
 //        }
 //    }
->>>>>>> Stashed changes
-}
 
 #Preview {
     MainView()
