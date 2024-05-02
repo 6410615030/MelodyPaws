@@ -8,6 +8,7 @@
 import Foundation
 import AVFoundation
 
+<<<<<<< Updated upstream
 class AudioManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
     static let shared = AudioManager() // Singleton instance
     

@@ -21,6 +21,7 @@
 		5E2033112BDE61E8006E1CA5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2033102BDE61E8006E1CA5 /* MainView.swift */; };
 		5E2033132BDE61EB006E1CA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E2033122BDE61EB006E1CA5 /* Assets.xcassets */; };
 		5E2033162BDE61EB006E1CA5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E2033152BDE61EB006E1CA5 /* Preview Assets.xcassets */; };
+<<<<<<< Updated upstream
 		5EC8999D2BE3881B00DB0EDA /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5EC8999C2BE3881B00DB0EDA /* FirebaseAnalytics */; };
 		5EC8999F2BE3881B00DB0EDA /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 5EC8999E2BE3881B00DB0EDA /* FirebaseAnalyticsOnDeviceConversion */; };
 		5EC899A12BE3881B00DB0EDA /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5EC899A02BE3881B00DB0EDA /* FirebaseAnalyticsSwift */; };
@@ -74,6 +75,7 @@
 		5E2033102BDE61E8006E1CA5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		5E2033122BDE61EB006E1CA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E2033152BDE61EB006E1CA5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+<<<<<<< Updated upstream
 		5EC899B92BE38AEE00DB0EDA /* CharacterObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterObj.swift; sourceTree = "<group>"; };
 		5EC899BF2BE3967C00DB0EDA /* AudioRecordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecordManager.swift; sourceTree = "<group>"; };
 		5EC899C12BE3974800DB0EDA /* AudioTuneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTuneViewModel.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				5EF7FC4F2BE178F200399757 /* LoginView.swift */,
 				5EF7FC5B2BE179BE00399757 /* TLButton.swift */,
 				5E175E822BE22A5E00175B92 /* HomeView.swift */,
+<<<<<<< Updated upstream
 				CDDBA0732BE24AC900C8DB75 /* changePasswordView.swift */,
 				CDDBA07B2BE2CB6400C8DB75 /* settingsView.swift */,
 				5E175E8F2BE2397C00175B92 /* GameView.swift */,
@@ -244,6 +247,7 @@
 				5EF7FC572BE1797C00399757 /* RegisterViewModel.swift */,
 				5EF7FC592BE1798700399757 /* ProfileViewModel.swift */,
 				5E175E842BE22A7200175B92 /* HomeViewModel.swift */,
+<<<<<<< Updated upstream
 				CDDBA0752BE24AE000C8DB75 /* changePasswordViewModel.swift */,
 				5E175E912BE2398900175B92 /* GameViewModel.swift */,
 				5E175E982BE244C400175B92 /* AudioViewModel.swift */,
@@ -265,7 +269,11 @@
 			children = (
 				5EF7FC5D2BE17AF200399757 /* User.swift */,
 				5E175EA22BE256C800175B92 /* FallingItem.swift */,
+<<<<<<< Updated upstream
 				5EC899B92BE38AEE00DB0EDA /* CharacterObj.swift */,
+=======
+				5E59EB6F2BE2BB160019C1C1 /* CharacterObj.swift */,
+>>>>>>> Stashed changes
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -379,6 +387,10 @@
 				5EF7FC5A2BE1798700399757 /* ProfileViewModel.swift in Sources */,
 				5EC899BA2BE38AEE00DB0EDA /* CharacterObj.swift in Sources */,
 				CDDBA0742BE24AC900C8DB75 /* changePasswordView.swift in Sources */,
+=======
+				5E175E9D2BE249BF00175B92 /* FallingItemsView.swift in Sources */,
+				5EF7FC5A2BE1798700399757 /* ProfileViewModel.swift in Sources */,
+>>>>>>> Stashed changes
 				5E175E9B2BE2481E00175B92 /* CharacterObjView.swift in Sources */,
 				5EF7FC5C2BE179BE00399757 /* TLButton.swift in Sources */,
 				5EC899C02BE3967C00DB0EDA /* AudioRecordManager.swift in Sources */,
