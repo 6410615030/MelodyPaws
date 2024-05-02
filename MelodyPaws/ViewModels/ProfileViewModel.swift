@@ -8,7 +8,6 @@
 import Foundation
 import FirebaseAuth
 import FirebaseFirestore
-
 class ProfileViewModel: ObservableObject {
     @Published var user: User? = nil
     
@@ -29,7 +28,10 @@ class ProfileViewModel: ObservableObject {
                         name: data["name"] as? String ?? "",
                         email: data["email"] as? String ?? "",
                         joined: data["joined"] as? TimeInterval ?? 0,
-                        coins: data["coins"] as? Int ?? 0
+                        bestScore: data["bestScore"] as? Int ?? 0,
+                        wearing: data["wearing"] as? String ?? "default-removebg-preview",
+                        wardrobe: data["wardrobe"] as? [String] ?? ["default-removebg-preview","glasses-removebg-preview","cap-removebg-preview","HairClip-removebg-preview"]
+
                     )
                 }
             }
@@ -42,4 +44,22 @@ class ProfileViewModel: ObservableObject {
             print(error)
         }
     }
+    
+    // Function to change the wearing for the current user
+    func changeWearing(to newWearing: String) {
+        guard let userId = Auth.auth().currentUser?.uid else {
+            return
+        }
+        let db = Firestore.firestore()
+        db.collection("users").document(userId).setData(["wearing": newWearing], merge: true) { [weak self] error in
+            if let error = error {
+                print("Error updating wearing: \(error)")
+                return
+            }
+            DispatchQueue.main.async {
+                self?.user?.wearing = newWearing
+            }
+        }
+    }
+
 }

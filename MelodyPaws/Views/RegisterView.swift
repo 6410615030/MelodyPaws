@@ -72,7 +72,7 @@ struct RegisterView: View {
                                     viewModel.register()
                                 }
                                 .cornerRadius(30)
-                                .padding()
+                            
                            
                             
                             

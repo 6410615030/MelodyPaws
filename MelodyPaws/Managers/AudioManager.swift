@@ -9,6 +9,8 @@ import Foundation
 import AVFoundation
 
 class AudioManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
+    static let shared = AudioManager() // Singleton instance
+    
     var player: AVAudioPlayer?
     let tracks = ["track1"]
     var currentTrackIndex = 0
@@ -19,6 +21,7 @@ class AudioManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
         super.init()
         setupAudioSession()
     }
+    
     
     func setupAudioSession() {
         do {

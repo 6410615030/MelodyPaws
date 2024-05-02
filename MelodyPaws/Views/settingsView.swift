@@ -12,6 +12,7 @@ struct settingsView: View {
     @ObservedObject var audioManager: AudioManager
     var body: some View {
         
+        
         //dont have turn off sound yet
         
 //        ZStack{
@@ -50,18 +51,20 @@ struct settingsView: View {
                 
                 VStack {
                     Button(action: {
-                        AudioManager().toggleSound()
-                        }) {
-                            Image(systemName: audioManager.isSoundOn ? "speaker.3.fill" : "speaker.slash.fill")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 30, height: 30)
-                                .foregroundColor(AudioManager().isSoundOn ? .green : .red)
-                                .padding()
-                                .background(Color.white)
-                                .cornerRadius(30)
-                        }
-                        .padding()
+                        AudioManager.shared.toggleSound() // Access the shared instance
+                    }) {
+                        Image(systemName: AudioManager.shared.isSoundOn ? "speaker.3.fill" : "speaker.slash.fill")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 30, height: 30)
+                            .foregroundColor(AudioManager.shared.isSoundOn ? .green : .red)
+                            .padding()
+                            .background(Color.white)
+                            .cornerRadius(30)
+                    }
+                    .padding()
+
+
                     VStack {
                         NavigationLink(destination: changePasswordView()) {
                             Text("Change Password")

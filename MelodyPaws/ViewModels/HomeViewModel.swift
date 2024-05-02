@@ -12,6 +12,7 @@ class HomeViewModel: ObservableObject {
     @Published var currentUserId = ""
     @Published var currentUser: User?
     
+    
     private var handler: AuthStateDidChangeListenerHandle?
     
     init() {

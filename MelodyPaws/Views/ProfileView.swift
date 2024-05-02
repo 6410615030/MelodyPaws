@@ -10,40 +10,85 @@ import SwiftUI
 struct ProfileView: View {
     @StateObject var viewModel = ProfileViewModel()
     var body: some View {
+        
         VStack {
             if let user = viewModel.user {
-                Image(systemName: "person.circle")
+                HStack {
+                    NavigationLink(destination: Wardrobe()) {
+                        HStack {
+                            Circle()
+                                .fill(Color.blue)
+                                .frame(width: 30, height: 30)
+                                .overlay(Image(systemName: "wand.and.stars").foregroundColor(.white))
+                            
+                        }
+                        .padding()
+                    }
+                    
+                    NavigationLink(destination: settingsView(audioManager: AudioManager())) {
+                        HStack {
+                            Circle()
+                                .fill(Color.green)
+                                .frame(width: 30, height: 30)
+                                .overlay(Image(systemName: "gearshape").foregroundColor(.white))
+                            
+                        }
+                        .padding()
+                    }
+                    
+                    
+//                    NavigationLink(destination: ShopView()) {
+//                        HStack {
+//                            Circle()
+//                                .fill(Color.orange)
+//                                .frame(width: 30, height: 30)
+//                                .overlay(Image(systemName: "cart").foregroundColor(.white))
+//                            
+//                        }
+//                        .padding()
+//                    }
+        //            Toggle(isOn: $isMicOn) {
+        //                                Image(systemName: isMicOn ? "mic.fill" : "mic.slash.fill")
+        //                            }
+        //                            .padding()
+                                    
+                                    NavigationLink(destination: Wardrobe()) {
+                                        HStack{
+                                            Image(systemName: "music.note")
+                                                .padding()
+                                                .background(Color.blue)
+                                                .foregroundColor(.white)
+                                                .clipShape(Circle())
+                                                .frame(width: 30, height: 30)
+                                        }
+                                        
+
+                                    }
+                    
+                }
+                Text("Best Score : \(user.bestScore)") // Display the best score
+                                        .font(.title)
+                                        .padding()
+                Image("\(user.wearing)")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .foregroundColor(.blue)
-                    .frame(width: 125, height: 125)
-                
-                VStack(alignment: .leading) {
-                    HStack {
-                        Text("Name: ")
-                        Text(user.name)
-                    }
-                    HStack {
-                        Text("Email: ")
-                        Text(user.email)
-                    }
-                    HStack {
-                        Text("Member Since: ")
-                        Text("\(Date(timeIntervalSince1970: user.joined).formatted(date: .abbreviated, time: .shortened))")
-                    }
-                    HStack {
-                        Text("Coins: ")
-                        Text("\(user.coins)") 
-                    }
-                }
-                
-                Button {
-                    viewModel.logOut()
-                } label: {
-                    Text("Logout")
+                .frame(width: 500, height: 500)
+                VStack {
+                    
+                        NavigationLink(destination: GameView()) {
+                            HStack {
+                                Image(systemName: "play.fill")
+                                Text("PLAY")
+                            }
+                            .padding()
+                            .foregroundColor(.white)
+                            .background(Color.black)
+                            .cornerRadius(30)
+                        }
+                    
                 }
             } else {
-                Text("Loading Profile...")
+                LoginView()
             }
         }
         .onAppear {

@@ -24,7 +24,7 @@ struct MainView: View {
                             audioManager.startPlayback(trackIndex: 0)
                         }
                         .navigationBarHidden(true)
-                    NavigationLink(destination: HomeView()) {
+                    NavigationLink(destination: ProfileView()) {
                                     Image(systemName: "play.fill")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)

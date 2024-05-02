@@ -47,9 +47,6 @@
 		5EF7FC5A2BE1798700399757 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF7FC592BE1798700399757 /* ProfileViewModel.swift */; };
 		5EF7FC5C2BE179BE00399757 /* TLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF7FC5B2BE179BE00399757 /* TLButton.swift */; };
 		5EF7FC5E2BE17AF200399757 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF7FC5D2BE17AF200399757 /* User.swift */; };
-		CD9FA3CF2BE3A24D006EDE5E /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9FA3CE2BE3A24D006EDE5E /* ShopView.swift */; };
-		CD9FA3D12BE3A2A8006EDE5E /* ShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9FA3D02BE3A2A8006EDE5E /* ShopViewModel.swift */; };
-		CD9FA3D32BE3B126006EDE5E /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9FA3D22BE3B126006EDE5E /* ItemView.swift */; };
 		CD9FA3D72BE3BC2B006EDE5E /* Wardrobe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9FA3D62BE3BC2B006EDE5E /* Wardrobe.swift */; };
 		CDDBA0742BE24AC900C8DB75 /* changePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDBA0732BE24AC900C8DB75 /* changePasswordView.swift */; };
 		CDDBA0762BE24AE000C8DB75 /* changePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDBA0752BE24AE000C8DB75 /* changePasswordViewModel.swift */; };
@@ -84,9 +81,6 @@
 		5EF7FC592BE1798700399757 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		5EF7FC5B2BE179BE00399757 /* TLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLButton.swift; sourceTree = "<group>"; };
 		5EF7FC5D2BE17AF200399757 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		CD9FA3CE2BE3A24D006EDE5E /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
-		CD9FA3D02BE3A2A8006EDE5E /* ShopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewModel.swift; sourceTree = "<group>"; };
-		CD9FA3D22BE3B126006EDE5E /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		CD9FA3D62BE3BC2B006EDE5E /* Wardrobe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wardrobe.swift; sourceTree = "<group>"; };
 		CDDBA0732BE24AC900C8DB75 /* changePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = changePasswordView.swift; sourceTree = "<group>"; };
 		CDDBA0752BE24AE000C8DB75 /* changePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = changePasswordViewModel.swift; sourceTree = "<group>"; };
@@ -213,8 +207,6 @@
 				5E175E8F2BE2397C00175B92 /* GameView.swift */,
 				5E175E9A2BE2481E00175B92 /* CharacterObjView.swift */,
 				5E175E9C2BE249BF00175B92 /* FallingItemsView.swift */,
-				CD9FA3CE2BE3A24D006EDE5E /* ShopView.swift */,
-				CD9FA3D22BE3B126006EDE5E /* ItemView.swift */,
 				CD9FA3D62BE3BC2B006EDE5E /* Wardrobe.swift */,
 			);
 			path = Views;
@@ -231,7 +223,6 @@
 				CDDBA0752BE24AE000C8DB75 /* changePasswordViewModel.swift */,
 				5E175E912BE2398900175B92 /* GameViewModel.swift */,
 				5E175E982BE244C400175B92 /* AudioViewModel.swift */,
-				CD9FA3D02BE3A2A8006EDE5E /* ShopViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -349,20 +340,17 @@
 				5E175EA32BE256C800175B92 /* FallingItem.swift in Sources */,
 				5EF7FC542BE1793000399757 /* RegisterView.swift in Sources */,
 				5E175E9D2BE249BF00175B92 /* FallingItemsView.swift in Sources */,
-				CD9FA3D32BE3B126006EDE5E /* ItemView.swift in Sources */,
 				5EF7FC5A2BE1798700399757 /* ProfileViewModel.swift in Sources */,
 				5EC899BA2BE38AEE00DB0EDA /* CharacterObj.swift in Sources */,
 				CDDBA0742BE24AC900C8DB75 /* changePasswordView.swift in Sources */,
 				5E175E9B2BE2481E00175B92 /* CharacterObjView.swift in Sources */,
 				5EF7FC5C2BE179BE00399757 /* TLButton.swift in Sources */,
 				CDDBA07C2BE2CB6400C8DB75 /* settingsView.swift in Sources */,
-				CD9FA3D12BE3A2A8006EDE5E /* ShopViewModel.swift in Sources */,
 				5EF7FC562BE1796700399757 /* LoginViewModel.swift in Sources */,
 				5EF7FC502BE178F200399757 /* LoginView.swift in Sources */,
 				5E175E852BE22A7200175B92 /* HomeViewModel.swift in Sources */,
 				CDDBA0762BE24AE000C8DB75 /* changePasswordViewModel.swift in Sources */,
 				5EF7FC5E2BE17AF200399757 /* User.swift in Sources */,
-				CD9FA3CF2BE3A24D006EDE5E /* ShopView.swift in Sources */,
 				5EF7FC522BE1790E00399757 /* ProfileView.swift in Sources */,
 				5EF7FC582BE1797C00399757 /* RegisterViewModel.swift in Sources */,
 				5EF7FC4E2BE178E000399757 /* MainViewModel.swift in Sources */,

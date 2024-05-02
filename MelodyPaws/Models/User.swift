@@ -12,7 +12,7 @@ struct User: Codable {
     let name: String
     let email: String
     let joined: TimeInterval
-    var coins: Int = 0
-    var wearing: String = "default"
-    var wardrobe: [String] = ["default"]
+    var bestScore: Int = 0
+    var wearing: String = "default-removebg-preview"
+    var wardrobe: [String] = ["default-removebg-preview","glasses-removebg-preview","cap-removebg-preview","HairClip-removebg-preview"]
 }

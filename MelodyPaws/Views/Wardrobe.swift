@@ -8,13 +8,31 @@
 import SwiftUI
 
 struct Wardrobe: View {
-    @StateObject var viewModel = HomeViewModel()
-    var body: some View {
-        Image("\(viewModel.currentUser?.wearing ?? "default")").resizable()
-            .aspectRatio(contentMode: .fit)
-        .frame(width: 50, height: 50)
+    @StateObject var viewModel = ProfileViewModel()
 
-        
+    var body: some View {
+        List {
+            if let wardrobeItems = viewModel.user?.wardrobe {
+                ForEach(wardrobeItems, id: \.self) { item in
+                    HStack {
+                        
+                        Image(item) 
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 200, height: 200,alignment: .center)
+                    }
+                    .onTapGesture {
+                        viewModel.changeWearing(to: item)
+                    }
+                }
+            } else {
+                Text("No items in wardrobe.")
+            }
+        }
+        .onAppear {
+            viewModel.fetchUser()
+        }
+        .navigationTitle("Wardrobe")
     }
 }
 
