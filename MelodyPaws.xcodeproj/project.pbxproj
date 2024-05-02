@@ -36,6 +36,11 @@
 		5EC899B62BE3898F00DB0EDA /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 5EC899B52BE3898F00DB0EDA /* FirebaseFirestoreCombine-Community */; };
 		5EC899B82BE3899800DB0EDA /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5EC899B72BE3899800DB0EDA /* FirebaseFirestore */; };
 		5EC899BA2BE38AEE00DB0EDA /* CharacterObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC899B92BE38AEE00DB0EDA /* CharacterObj.swift */; };
+		5EC899C02BE3967C00DB0EDA /* AudioRecordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC899BF2BE3967C00DB0EDA /* AudioRecordManager.swift */; };
+		5EC899C22BE3974800DB0EDA /* AudioTuneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC899C12BE3974800DB0EDA /* AudioTuneViewModel.swift */; };
+		5EC899C42BE3989700DB0EDA /* AudioTunerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC899C32BE3989700DB0EDA /* AudioTunerManager.swift */; };
+		5EC899C62BE3A87300DB0EDA /* track2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5EC899C52BE3A87300DB0EDA /* track2.mp3 */; };
+		5EC899C82BE3A90700DB0EDA /* TrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC899C72BE3A90700DB0EDA /* TrackView.swift */; };
 		5EF7FC2A2BE1780B00399757 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EF7FC292BE1780B00399757 /* GoogleService-Info.plist */; };
 		5EF7FC2C2BE1786800399757 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF7FC2B2BE1786800399757 /* Extension.swift */; };
 		5EF7FC4E2BE178E000399757 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF7FC4D2BE178DF00399757 /* MainViewModel.swift */; };
@@ -70,6 +75,11 @@
 		5E2033122BDE61EB006E1CA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E2033152BDE61EB006E1CA5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5EC899B92BE38AEE00DB0EDA /* CharacterObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterObj.swift; sourceTree = "<group>"; };
+		5EC899BF2BE3967C00DB0EDA /* AudioRecordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecordManager.swift; sourceTree = "<group>"; };
+		5EC899C12BE3974800DB0EDA /* AudioTuneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTuneViewModel.swift; sourceTree = "<group>"; };
+		5EC899C32BE3989700DB0EDA /* AudioTunerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTunerManager.swift; sourceTree = "<group>"; };
+		5EC899C52BE3A87300DB0EDA /* track2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = track2.mp3; sourceTree = "<group>"; };
+		5EC899C72BE3A90700DB0EDA /* TrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackView.swift; sourceTree = "<group>"; };
 		5EF7FC292BE1780B00399757 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5EF7FC2B2BE1786800399757 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		5EF7FC4D2BE178DF00399757 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -124,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				5E175E8B2BE2306900175B92 /* track1.mp3 */,
+				5EC899C52BE3A87300DB0EDA /* track2.mp3 */,
 			);
 			path = BGTrack;
 			sourceTree = "<group>";
@@ -132,6 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				5E175E892BE22FA300175B92 /* AudioManager.swift */,
+				5EC899BF2BE3967C00DB0EDA /* AudioRecordManager.swift */,
+				5EC899C32BE3989700DB0EDA /* AudioTunerManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -207,7 +220,18 @@
 				5E175E8F2BE2397C00175B92 /* GameView.swift */,
 				5E175E9A2BE2481E00175B92 /* CharacterObjView.swift */,
 				5E175E9C2BE249BF00175B92 /* FallingItemsView.swift */,
+				5EC899C72BE3A90700DB0EDA /* TrackView.swift */,
+<<<<<<< refs/remotes/origin/main
+=======
+				5E175E8F2BE2397C00175B92 /* GameView.swift */,
+				5E175E9A2BE2481E00175B92 /* CharacterObjView.swift */,
+				5E175E9C2BE249BF00175B92 /* FallingItemsView.swift */,
+>>>>>>> Stashed changes
+				CD9FA3CE2BE3A24D006EDE5E /* ShopView.swift */,
+				CD9FA3D22BE3B126006EDE5E /* ItemView.swift */,
 				CD9FA3D62BE3BC2B006EDE5E /* Wardrobe.swift */,
+=======
+>>>>>>> track
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,6 +247,15 @@
 				CDDBA0752BE24AE000C8DB75 /* changePasswordViewModel.swift */,
 				5E175E912BE2398900175B92 /* GameViewModel.swift */,
 				5E175E982BE244C400175B92 /* AudioViewModel.swift */,
+				5EC899C12BE3974800DB0EDA /* AudioTuneViewModel.swift */,
+<<<<<<< refs/remotes/origin/main
+=======
+				5E175E912BE2398900175B92 /* GameViewModel.swift */,
+				5E175E982BE244C400175B92 /* AudioViewModel.swift */,
+>>>>>>> Stashed changes
+				CD9FA3D02BE3A2A8006EDE5E /* ShopViewModel.swift */,
+=======
+>>>>>>> track
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -316,6 +349,7 @@
 			files = (
 				5E2033162BDE61EB006E1CA5 /* Preview Assets.xcassets in Resources */,
 				5EF7FC2A2BE1780B00399757 /* GoogleService-Info.plist in Resources */,
+				5EC899C62BE3A87300DB0EDA /* track2.mp3 in Resources */,
 				5E175E8C2BE2306900175B92 /* track1.mp3 in Resources */,
 				5E2033132BDE61EB006E1CA5 /* Assets.xcassets in Resources */,
 			);
@@ -329,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E175E992BE244C400175B92 /* AudioViewModel.swift in Sources */,
+				5EC899C42BE3989700DB0EDA /* AudioTunerManager.swift in Sources */,
 				5E175E922BE2398900175B92 /* GameViewModel.swift in Sources */,
 				5EF7FC2C2BE1786800399757 /* Extension.swift in Sources */,
 				5E2033112BDE61E8006E1CA5 /* MainView.swift in Sources */,
@@ -339,12 +374,15 @@
 				5E175E902BE2397C00175B92 /* GameView.swift in Sources */,
 				5E175EA32BE256C800175B92 /* FallingItem.swift in Sources */,
 				5EF7FC542BE1793000399757 /* RegisterView.swift in Sources */,
+				5EC899C82BE3A90700DB0EDA /* TrackView.swift in Sources */,
 				5E175E9D2BE249BF00175B92 /* FallingItemsView.swift in Sources */,
 				5EF7FC5A2BE1798700399757 /* ProfileViewModel.swift in Sources */,
 				5EC899BA2BE38AEE00DB0EDA /* CharacterObj.swift in Sources */,
 				CDDBA0742BE24AC900C8DB75 /* changePasswordView.swift in Sources */,
 				5E175E9B2BE2481E00175B92 /* CharacterObjView.swift in Sources */,
 				5EF7FC5C2BE179BE00399757 /* TLButton.swift in Sources */,
+				5EC899C02BE3967C00DB0EDA /* AudioRecordManager.swift in Sources */,
+				5EC899C22BE3974800DB0EDA /* AudioTuneViewModel.swift in Sources */,
 				CDDBA07C2BE2CB6400C8DB75 /* settingsView.swift in Sources */,
 				5EF7FC562BE1796700399757 /* LoginViewModel.swift in Sources */,
 				5EF7FC502BE178F200399757 /* LoginView.swift in Sources */,
@@ -352,6 +390,7 @@
 				CDDBA0762BE24AE000C8DB75 /* changePasswordViewModel.swift in Sources */,
 				5EF7FC5E2BE17AF200399757 /* User.swift in Sources */,
 				5EF7FC522BE1790E00399757 /* ProfileView.swift in Sources */,
+				5E59EB702BE2BB160019C1C1 /* CharacterObj.swift in Sources */,
 				5EF7FC582BE1797C00399757 /* RegisterViewModel.swift in Sources */,
 				5EF7FC4E2BE178E000399757 /* MainViewModel.swift in Sources */,
 			);
@@ -490,6 +529,7 @@
 				DEVELOPMENT_TEAM = 98AY4BJRW2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app requires microphone access to tune pitch.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -519,6 +559,7 @@
 				DEVELOPMENT_TEAM = 98AY4BJRW2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app requires microphone access to tune pitch.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -12,7 +12,7 @@ class AudioManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
     static let shared = AudioManager() // Singleton instance
     
     var player: AVAudioPlayer?
-    let tracks = ["track1"]
+    let tracks = ["track1", "track2"]
     var currentTrackIndex = 0
     @Published var isSoundOn = true
     
@@ -22,8 +22,7 @@ class AudioManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
         setupAudioSession()
     }
     
-    
-    func setupAudioSession() {
+    private func setupAudioSession() {
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
             try AVAudioSession.sharedInstance().setActive(true)
@@ -32,7 +31,7 @@ class AudioManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
         }
     }
 
-    func startPlayback(trackIndex: Int) {
+    private func startPlayback(trackIndex: Int) {
         guard trackIndex < tracks.count else { return }
         let trackName = tracks[trackIndex]
         guard let url = Bundle.main.url(forResource: trackName, withExtension: "mp3") else {
@@ -49,9 +48,12 @@ class AudioManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
             print("Failed to initialize player. Error: \(error)")
         }
     }
-
-    func nextTrack() {
-        currentTrackIndex = (currentTrackIndex + 1) % tracks.count
+    
+    func changeTrack(trackIndex: Int) {
+        player?.stop()
+        player = nil
+        setupAudioSession()
+        self.currentTrackIndex = trackIndex
         startPlayback(trackIndex: currentTrackIndex)
     }
     func toggleSound() {

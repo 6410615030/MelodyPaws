@@ -9,7 +9,7 @@ import SwiftUI
 import FirebaseAuth
 
 struct MainView: View {
-    @StateObject var audioManager = AudioManager()
+    @StateObject var viewModel = AudioViewModel()
     
     var body: some View {
             NavigationView {
@@ -20,8 +20,7 @@ struct MainView: View {
                         .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: UIScreen.main.bounds.height)
                         .edgesIgnoringSafeArea(.all)
                         .onAppear {
-                            audioManager.setupAudioSession()
-                            audioManager.startPlayback(trackIndex: 0)
+                            viewModel.play()
                         }
                         .navigationBarHidden(true)
                     NavigationLink(destination: ProfileView()) {
@@ -40,7 +39,19 @@ struct MainView: View {
                 }
             }
         }
-}
+    }
+    
+//    var accountView: some View {
+//        TabView {
+//
+//            
+//            ProfileView()
+//                .tabItem {
+//                    Label("Profile", systemImage: "person.circle")
+//                }
+//            
+//        }
+//    }
 
 #Preview {
     MainView()

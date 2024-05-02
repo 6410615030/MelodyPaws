@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct HomeView: View {
+<<<<<<< refs/remotes/origin/main
     
+=======
+    @StateObject var tuneViewModel = AudioTuneViewModel()
+>>>>>>> track
     @StateObject var viewModel = HomeViewModel()
+    @State private var isRecording = false
         
     var body: some View {
         
@@ -19,53 +24,23 @@ struct HomeView: View {
             if !viewModel.isSignedIn, viewModel.currentUserId.isEmpty {
                 LoginView()
             } else {
-                HStack {
-                    NavigationLink(destination: Wardrobe()) {
-                        HStack {
-                            Circle()
-                                .fill(Color.blue)
-                                .frame(width: 30, height: 30)
-                                .overlay(Image(systemName: "wand.and.stars").foregroundColor(.white))
-                            
-                        }
-                        .padding()
-                    }
-                    
-                    NavigationLink(destination: settingsView(audioManager: AudioManager())) {
-                        HStack {
-                            Circle()
-                                .fill(Color.green)
-                                .frame(width: 30, height: 30)
-                                .overlay(Image(systemName: "gearshape").foregroundColor(.white))
-                            
-                        }
-                        .padding()
-                    }
-                    
-                    
-        //            Toggle(isOn: $isMicOn) {
-        //                                Image(systemName: isMicOn ? "mic.fill" : "mic.slash.fill")
-        //                            }
-        //                            .padding()
-                                    
-//                                    NavigationLink(destination: ProfileView()) {
-//                                        HStack{
-//                                            Image(systemName: "music.note")
-//                                                .padding()
-//                                                .background(Color.blue)
-//                                                .foregroundColor(.white)
-//                                                .clipShape(Circle())
-//                                                .frame(width: 30, height: 30)
-//                                        }
-//                                        
-//
-//                                    }
-                    
-                }
+                
+                Text("Currently wearing: \(viewModel.currentUser?.wearing ?? "default")")
+                
                 Image("\(viewModel.currentUser?.wearing ?? "default")")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                .frame(width: 500, height: 500)
+                .frame(width: 50, height: 50)
+                
+    
+                NavigationLink("wardrobe", destination: Wardrobe())
+                    .padding()
+                NavigationLink("settings", destination: settingsView(audioManager: AudioManager()))
+                    .padding()
+                NavigationLink("shop", destination: ShopView())
+                    .padding()
+                NavigationLink("tracks", destination: TrackView())
+                    .padding()
                 VStack {
                     if !viewModel.isSignedIn, viewModel.currentUserId.isEmpty {
                         LoginView()
@@ -90,6 +65,18 @@ struct HomeView: View {
 
                 
                 
+                Button(isRecording ? "Stop Recording" : "Start Recording") {
+                    isRecording.toggle()
+                    if isRecording {
+                        tuneViewModel.startRecordingTapped()
+                    } else {
+                        tuneViewModel.stopRecordingTapped()
+                    }
+                }
+<<<<<<< refs/remotes/origin/main
+                
+=======
+>>>>>>> track
             }
         }
     }

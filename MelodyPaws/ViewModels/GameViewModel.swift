@@ -74,15 +74,16 @@ class GameViewModel: ObservableObject {
             let distanceX = abs(posX - items[i].startX)
             if distanceX <= collisionThreshold{
                 score += 1
-//                toRemoveItems.append(items[i])
+                toRemoveItems.append(items[i])
                 items[i].atPos = true
             }
-            else {
-                items[i].atPos = false
-            }
-            if items[i].currentY == items[i].endY {
-                toRemoveItems.append(items[i])
-            }
+//            else {
+//                items[i].atPos = false
+//            }
+//            if items[i].currentY == items[i].endY {
+//                toRemoveItems.append(items[i])
+//            }
+//                toRemoveItems.append(items[i])
         }
         
         for i in toRemoveItems.indices {
