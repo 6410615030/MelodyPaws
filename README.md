@@ -6,7 +6,7 @@ With features like customizable background music, character skins, and smooth an
 
 ## Features
 - **Registration and Login:** Create an account to access the game and log in with ease.
-- **Change Password:** Users have the option to change their password for added security.
+- **Change Password:** Users have the option to change their password.
 - **Character Control:** Maneuver your cat character to collect falling items by dragging them across the screen.
 - **Smooth Animation:** Enjoy seamless animations throughout gameplay for an immersive experience.
 - **Change Skins:** Personalize your cat character with different skins to suit your style.
@@ -23,6 +23,9 @@ To get started with MelodyPaws, follow these steps:
 1. Clone the repository: `git clone https://github.com/6410615030/MelodyPaws.git`
 2. Open the project in Xcode.
 3. Build and run the project on your preferred platform, on simulator or physical device.
+
+## Wireframe
+<img src="media/wireframe.jpg" width = 30%>
 
 ## Members
 Natiphon Chanphet 6410615030
