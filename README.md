@@ -25,7 +25,7 @@ To get started with MelodyPaws, follow these steps:
 3. Build and run the project on your preferred platform, on simulator or physical device.
 
 ## Wireframe
-<img src="media/wireframe.jpg" width = 30%>
+<img src="media/wireframe.jpg" >
 
 ## Members
 Natiphon Chanphet 6410615030
