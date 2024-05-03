@@ -10,9 +10,12 @@ import SwiftUI
 struct settingsView: View {
     @StateObject var viewModel = ProfileViewModel()
     @ObservedObject var audioManager: AudioManager
+    @State var isActive = false
     var body: some View {
         
-        
+        NavigationLink(destination: MainView(), isActive: $isActive){
+                                        EmptyView()
+                                    }
         //dont have turn off sound yet
         
 //        ZStack{
@@ -76,6 +79,7 @@ struct settingsView: View {
                         
                         Button(action: {
                             viewModel.logOut()
+                            isActive.toggle()
                         }) {
                             Text("Logout")
                                 .padding()

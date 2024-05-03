@@ -15,11 +15,12 @@ struct Wardrobe: View {
             if let wardrobeItems = viewModel.user?.wardrobe {
                 ForEach(wardrobeItems, id: \.self) { item in
                     HStack {
-                        
-                        Image(item) 
+                        Spacer()
+                        Image(item)
                             .resizable()
                             .scaledToFit()
                             .frame(width: 200, height: 200,alignment: .center)
+                        Spacer()
                     }
                     .onTapGesture {
                         viewModel.changeWearing(to: item)

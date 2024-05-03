@@ -8,11 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-<<<<<<< refs/remotes/origin/main
-    
-=======
     @StateObject var tuneViewModel = AudioTuneViewModel()
->>>>>>> track
     @StateObject var viewModel = HomeViewModel()
     @State private var isRecording = false
     
@@ -37,15 +33,15 @@ struct HomeView: View {
                     .padding()
                 NavigationLink("settings", destination: settingsView(audioManager: AudioManager()))
                     .padding()
-                NavigationLink("shop", destination: ShopView())
-                    .padding()
+//                NavigationLink("shop", destination: ShopView())
+//                    .padding()
                 NavigationLink("tracks", destination: TrackView())
                     .padding()
                 VStack {
                     if !viewModel.isSignedIn, viewModel.currentUserId.isEmpty {
                         LoginView()
                     } else {
-                        NavigationLink(destination: GameView()) {
+                        NavigationLink(destination: GameView(wear: viewModel.currentUser?.wearing ?? "default-removebg-preview")) {
                             HStack {
                                 Image(systemName: "play.fill")
                                 Text("PLAY")
@@ -58,13 +54,6 @@ struct HomeView: View {
                     }
                 }
     
-
-
-
-                
-
-                
-                
                 Button(isRecording ? "Stop Recording" : "Start Recording") {
                     isRecording.toggle()
                     if isRecording {
@@ -73,10 +62,6 @@ struct HomeView: View {
                         tuneViewModel.stopRecordingTapped()
                     }
                 }
-<<<<<<< refs/remotes/origin/main
-                
-=======
->>>>>>> track
             }
         }
     }

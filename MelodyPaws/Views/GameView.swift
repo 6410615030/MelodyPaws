@@ -11,15 +11,23 @@ import UIKit
 
 struct GameView: View {
     @StateObject private var viewModel = GameViewModel(count: 1)
+    let wear: String
     
     var body: some View {
         GeometryReader{ geometry in
             ZStack{
-                
+                VStack {
+                    Text("Score: \(viewModel.score)")
+                        .font(.system(size: 25, weight: .bold))
+                        .background(Color.white.opacity(0.8))
+                        .cornerRadius(10)
+                        .foregroundColor(.black)
+                        .padding(10)
+                }
                 FallingItemView(items: viewModel.items, geometry: geometry, viewModel: viewModel)
                 
                 
-                Image(viewModel.charObj.imageName)
+                Image("\(wear)")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: viewModel.charObj.size.width, height: viewModel.charObj.size.height)
@@ -35,7 +43,6 @@ struct GameView: View {
                         }
                 
                                 VStack{
-                    Text("score: \(viewModel.score)")
                 }
                 .transaction { transaction in
                     transaction.animation = nil
@@ -68,6 +75,12 @@ struct FallingItemView: View{
     var body: some View{
         if !isEndGame {
             ZStack {
+                Image("bg")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: UIScreen.main.bounds.height)
+                    .edgesIgnoringSafeArea(.all)
+                
                 ForEach(items.indices, id: \.self) { index in
                     let item = items[index]
                     Image(item.imageName)
@@ -82,7 +95,7 @@ struct FallingItemView: View{
                                 if (viewModel.checkCollision(geometry: geometry, item: item, curY: currentYPositions[item.id])) {
                                     viewModel.isCollision(index: index)
                                 }
-                                if updatedPosY > geometry.size.height + 200 {
+                                if updatedPosY > geometry.size.height + 100 && !item.isCollide{
                                     isEndGame = true
                                 }
                             }
@@ -100,5 +113,5 @@ struct FallingItemView: View{
 }
 
 #Preview {
-    GameView()
+    GameView(wear: "default-removebg-preview")
 }

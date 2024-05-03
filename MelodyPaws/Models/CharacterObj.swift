@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 struct CharacterObj {
-    let size = CGSize(width: 100, height: 100)
+    let size = CGSize(width: 250, height: 250)
     var position: CGSize = CGSize(width: UIScreen.main.bounds.width/2, height: UIScreen.main.bounds.height-200)
-    var imageName: String 
+    var imageName: String
     
     
 }

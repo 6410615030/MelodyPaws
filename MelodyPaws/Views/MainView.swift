@@ -12,6 +12,7 @@ struct MainView: View {
     @StateObject var viewModel = AudioViewModel()
     
     var body: some View {
+        
             NavigationView {
                 ZStack {
                     Image("main")

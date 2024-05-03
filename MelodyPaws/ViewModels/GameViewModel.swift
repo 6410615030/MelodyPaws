@@ -12,7 +12,7 @@ import Combine
 
 class GameViewModel: ObservableObject {
     @Published var items: [FallingItem] = []
-    @Published var charObj = CharacterObj(imageName: "cat1")
+    @Published var charObj = CharacterObj(imageName: "default-removebg-preview")
     @Published var score: Int = 0
     private let itemImgNames = ["butterfly"]
     private var timer: AnyCancellable?
@@ -69,7 +69,8 @@ class GameViewModel: ObservableObject {
 
     func checkCollision(geometry: GeometryProxy, item: FallingItem, curY: CGFloat?) -> Bool {
         
-        let charObjFrame = CGRect(x: charObj.position.width, y: charObj.position.height+charObj.size.height/2,
+        let charObjFrame = CGRect(x: charObj.position.width-charObj.size.width/2,
+                                  y: charObj.position.height+charObj.size.height/2,
                                   width: charObj.size.width/2, height: charObj.size.height/2)
         let fallingItemFrame = CGRect(x: item.startX, y: curY ?? item.startY, width: item.size.width/2, height: item.size.height/2)
 
